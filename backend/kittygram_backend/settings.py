@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SEC_KEY', default='secret_key')
 
 DEBUG = os.environ.get('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kittygramdevops.myftp.org', '158.160.69.49']
+ALLOWED_HOSTS = ALLOWED_HOSTS = os.environ.get('SERVERNAMES').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
